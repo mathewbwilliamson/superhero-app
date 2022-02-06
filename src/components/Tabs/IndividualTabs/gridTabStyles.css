@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   /* First time I've EVER used Comic Sans unironically */
-  font-family: "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
   padding: 1vmin;
 }
 
