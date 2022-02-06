@@ -6,10 +6,12 @@
   --content-height: calc(
     100vh - var(--large-font-size) - 4 * var(--standard-vertical-padding) - 3px
   );
+
   --paper-color: #fbfbf8;
 
   overflow: hidden;
   line-height: 1.3;
+  background-color: #bbe5f9;
 }
 
 body {
@@ -33,10 +35,6 @@ header {
   color: rgb(255, 250, 250);
 }
 
-.app {
-  background-color: #bbe5f9;
-}
-
 main {
   max-width: 70ch;
   margin: 0 auto;
@@ -45,6 +43,17 @@ main {
   height: var(--content-height);
 }
 
+.tabs-container {
+  height: var(--content-height);
+}
+
 section {
   height: 100%;
+}
+
+@media (max-width: 550px) {
+  main,
+  .tabs-container {
+    height: calc(var(--content-height) - 65px);
+  }
 }

@@ -1,12 +1,13 @@
 .comic {
   display: flex;
   flex-wrap: wrap;
+  /* First time I've EVER used Comic Sans unironically */
   font-family: "Comic Sans", cursive;
   padding: 1vmin;
 }
 
 .comic .panel {
-  background-color: #fff;
+  background-color: var(--paper-color);
   border: solid 2px #000;
   box-shadow: 0 6px 6px -6px #000;
   display: flex;
@@ -38,7 +39,7 @@
   box-shadow: 4px 6px 6px -6px #000;
 }
 
-/* background colours */
+/* background colors */
 
 .panel:nth-child(4n + 1) {
   background-image: radial-gradient(circle, yellow, orange);

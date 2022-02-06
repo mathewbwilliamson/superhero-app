@@ -13,6 +13,12 @@
   height: calc(var(--content-height) - 160px);
 }
 
+@media (max-width: 550px) {
+  .tabs__outlet {
+    height: calc(var(--content-height) - 160px - 65px);
+  }
+}
+
 .tab-buttons {
   display: flex;
   flex-direction: row;

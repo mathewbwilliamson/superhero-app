@@ -7,3 +7,9 @@
   transform: rotate(0.5deg);
   padding: 23px;
 }
+
+@media (max-width: 550px) {
+  .stylized-box {
+    height: calc(var(--content-height) - 130px - 65px);
+  }
+}
