@@ -8,6 +8,10 @@
   padding: 23px;
 }
 
+.stylized-box .stylized-interior {
+  padding-left: 0;
+}
+
 @media (max-width: 550px) {
   .stylized-box {
     height: calc(var(--content-height) - 130px - 65px);

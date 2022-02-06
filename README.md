@@ -23,7 +23,17 @@ This project takes in data from a superhero database and it gives in a nice UI. 
 
 ## Basic Overview
 
+List View, Desktop
 ![image](https://user-images.githubusercontent.com/39387181/152694819-f35a541e-50ab-419e-8f47-8635c61b72c6.png)
+
+Grid View, Desktop
+![image](https://user-images.githubusercontent.com/39387181/152694978-51ea405a-1290-4bd4-ba82-5d99ec9769d7.png)
+
+List View, Mobile
+![image](https://user-images.githubusercontent.com/39387181/152694867-32a0a54a-a8e6-4ed3-aef5-c5c376e008d6.png)
+
+Grid View, Mobile
+![image](https://user-images.githubusercontent.com/39387181/152694995-779c706c-67a2-4341-b23e-146555b04081.png)
 
 ## Items of Note
 
