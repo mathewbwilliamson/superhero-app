@@ -26,8 +26,10 @@ export const TabsContainer: React.FC<TabsContainerProps> = () => {
       {!isLoading && !!data ? (
         <section>
           <TabListButtons activeTab={activeTab} onClick={changeTab} />
-          <div className="tabs__outlet">
-            <ActiveTabRenderer activeTab={activeTab} data={data} />
+          <div className="stylized-box">
+            <div className="tabs__outlet">
+              <ActiveTabRenderer activeTab={activeTab} data={data} />
+            </div>
           </div>
         </section>
       ) : (

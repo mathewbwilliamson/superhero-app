@@ -1,2 +1,5 @@
-.list-tab {
+.list-tab th,
+.list-tab td {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Superhero } from "../../../types/superhero";
+import "./gridTabStyles.css";
 
 interface GridTabProps {
   data: Superhero[];
@@ -7,13 +8,14 @@ interface GridTabProps {
 
 export const GridTab: React.FC<GridTabProps> = ({ data }) => {
   return (
-    <ul className="grid-tab">
-      {data.map((hero) => (
-        <li key={hero.id}>
-          <span>{hero.image.url}</span>
-          <span>{hero.name}</span>
-        </li>
-      ))}
+    <ul className="grid-tab stylized-interior">
+      <article className="comic">
+        {data.map((hero) => (
+          <div className="panel" key={hero.id}>
+            <p className="text top-left">{hero.name}</p>
+          </div>
+        ))}
+      </article>
     </ul>
   );
 };

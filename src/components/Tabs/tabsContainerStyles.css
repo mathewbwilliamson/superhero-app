@@ -1,9 +1,39 @@
 .tabs-container {
-  margin-top: 30px;
+  margin-top: 0px;
+}
+
+.list-tab__container {
+  padding: 20px;
 }
 
 .tabs__outlet {
+  background-color: var(--paper-color);
   overflow-y: auto;
   /* TODO FIX THE BELOW */
-  height: calc(var(--content-height) - 100px);
+  height: calc(var(--content-height) - 160px);
+}
+
+.tab-buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.tab-buttons li {
+  display: block;
+  background-color: #ddd;
+  padding: 0 10px;
+  margin-right: 10px;
+  font-family: "Bangers";
+  font-size: 20px;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
+  transform: rotate(2deg);
+  cursor: pointer;
+}
+
+.tab-buttons .active {
+  background-color: var(--paper-color);
+  font-size: 26px;
 }

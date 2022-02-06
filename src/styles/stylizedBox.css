@@ -1,0 +1,9 @@
+.stylized-box {
+  height: calc(var(--content-height) - 130px);
+  background: var(--paper-color);
+  border: solid black;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(0.5deg);
+  padding: 23px;
+}

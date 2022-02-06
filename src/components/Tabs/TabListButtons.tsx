@@ -12,7 +12,7 @@ export const TabListButtons: React.FC<TabListButtonsProps> = ({
   onClick,
 }) => {
   return (
-    <ul>
+    <ul className="tab-buttons">
       <li
         className={classNames(
           {
