@@ -4,12 +4,12 @@ import { apiClient } from "../services/apiService";
 export function useFetchData<T>(endpoint: string) {
   const [data, setData] = React.useState<T>();
   const [error, setError] = React.useState();
-  const [loading, setLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true);
+        setIsLoading(true);
         const { data: response } = await apiClient.get<T>(endpoint);
 
         setData(response);
@@ -17,7 +17,7 @@ export function useFetchData<T>(endpoint: string) {
         console.error(err);
         setError(err as any);
       }
-      setLoading(false);
+      setIsLoading(false);
     };
 
     fetchData();
@@ -25,7 +25,7 @@ export function useFetchData<T>(endpoint: string) {
 
   return {
     data,
-    loading,
+    isLoading,
     error,
   };
 }

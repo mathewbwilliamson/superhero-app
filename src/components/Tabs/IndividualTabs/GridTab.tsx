@@ -1,11 +1,19 @@
 import React from "react";
+import { Superhero } from "../../../types/superhero";
 
-interface GridTabProps {}
+interface GridTabProps {
+  data: Superhero[];
+}
 
-export const GridTab: React.FC<GridTabProps> = () => {
+export const GridTab: React.FC<GridTabProps> = ({ data }) => {
   return (
-    <div className="grid-tab">
-      <p>hiya GIRD</p>
-    </div>
+    <ul className="grid-tab">
+      {data.map((hero) => (
+        <li key={hero.id}>
+          <span>{hero.image.url}</span>
+          <span>{hero.name}</span>
+        </li>
+      ))}
+    </ul>
   );
 };

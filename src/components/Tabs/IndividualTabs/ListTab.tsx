@@ -1,10 +1,20 @@
 import React from "react";
+import { Superhero } from "../../../types/superhero";
 
-interface ListTabProps {}
-export const ListTab: React.FC<ListTabProps> = () => {
+interface ListTabProps {
+  data: Superhero[];
+}
+
+export const ListTab: React.FC<ListTabProps> = ({ data }) => {
   return (
-    <div className="list-tab">
-      <p>hiya LIST</p>
-    </div>
+    <ul className="list-tab">
+      {data.map((hero) => (
+        <li key={hero.id}>
+          <span>{hero.id}</span>
+          <span>{hero.name}</span>
+          <span>{hero.biography["full-name"]}</span>
+        </li>
+      ))}
+    </ul>
   );
 };
