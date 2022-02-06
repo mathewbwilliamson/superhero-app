@@ -21,6 +21,7 @@ export function useFetchData<T>(endpoint: string) {
     };
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return {
