@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+:root {
+  --large-font-size: 50px;
+  --standard-vertical-padding: 20px;
+  --content-height: calc(
+    100vh - var(--large-font-size) - 4 * var(--standard-vertical-padding) - 3px
+  );
+}
+
+h1 {
+  font-family: "Bangers", cursive;
+  font-size: var(--large-font-size);
+  letter-spacing: 0.4rem;
+  margin: 0;
+}
+
+header {
+  padding: var(--standard-vertical-padding) 30px;
+  margin: 0;
+  background-color: #ff0905;
+  color: rgb(255, 250, 250);
+}
+
+.app {
+  background-color: #bbe5f9;
+}
+
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: var(--standard-vertical-padding) 0;
+  overflow-y: hidden;
+  height: var(--content-height);
+}
+
+section {
+  height: 100%;
+}

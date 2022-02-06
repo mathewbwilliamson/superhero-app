@@ -4,6 +4,7 @@ import { Superhero } from "../../types/superhero";
 import { TabName } from "../../types/tabs";
 import { ActiveTabRenderer } from "./ActiveTabRenderer";
 import { TabListButtons } from "./TabListButtons";
+import "./tabsContainerStyles.css";
 
 interface TabsContainerProps {}
 
@@ -15,13 +16,13 @@ export const TabsContainer: React.FC<TabsContainerProps> = () => {
   const { data, isLoading } = useFetchData<Superhero[]>(
     "test-data/super-heroes.json"
   );
-  console.log("\x1b[42m%s \x1b[0m", "FIXME: [matt] data", isLoading, data);
+
   const changeTab = (newTab: TabName) => {
     setActiveTab(newTab);
   };
 
   return (
-    <>
+    <section className="tabs-container">
       {!isLoading && !!data ? (
         <section>
           <TabListButtons activeTab={activeTab} onClick={changeTab} />
@@ -32,6 +33,6 @@ export const TabsContainer: React.FC<TabsContainerProps> = () => {
       ) : (
         <section>Loading...</section>
       )}
-    </>
+    </section>
   );
 };

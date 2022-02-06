@@ -1,5 +1,6 @@
 import React from "react";
 import { Superhero } from "../../../types/superhero";
+import "./listTab.css";
 
 interface ListTabProps {
   data: Superhero[];
@@ -7,14 +8,19 @@ interface ListTabProps {
 
 export const ListTab: React.FC<ListTabProps> = ({ data }) => {
   return (
-    <ul className="list-tab">
+    <table className="list-tab">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Real Name</th>
+      </tr>
       {data.map((hero) => (
-        <li key={hero.id}>
-          <span>{hero.id}</span>
-          <span>{hero.name}</span>
-          <span>{hero.biography["full-name"]}</span>
-        </li>
+        <tr key={hero.id}>
+          <td>{hero.id}</td>
+          <td>{hero.name}</td>
+          <td>{hero.biography["full-name"]}</td>
+        </tr>
       ))}
-    </ul>
+    </table>
   );
 };

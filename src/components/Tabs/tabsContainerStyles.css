@@ -1,0 +1,9 @@
+.tabs-container {
+  margin-top: 30px;
+}
+
+.tabs__outlet {
+  overflow-y: auto;
+  /* TODO FIX THE BELOW */
+  height: calc(var(--content-height) - 100px);
+}
