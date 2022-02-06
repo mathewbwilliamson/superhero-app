@@ -13,6 +13,7 @@ export const GridTab: React.FC<GridTabProps> = ({ data }) => {
         {data.map((hero) => (
           <div className="panel" key={hero.id}>
             <p className="text top-left">{hero.name}</p>
+            <img src={hero.image.url} alt={`${hero.name}`} height="180px" />
           </div>
         ))}
       </article>

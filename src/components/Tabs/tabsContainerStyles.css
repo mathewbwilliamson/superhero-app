@@ -9,7 +9,7 @@
 .tabs__outlet {
   background-color: var(--paper-color);
   overflow-y: auto;
-  /* TODO FIX THE BELOW */
+  /* TODO FIX THE BELOW SO THERE IS NO FIXED VALUE, move to variables section */
   height: calc(var(--content-height) - 160px);
 }
 
