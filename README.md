@@ -4,6 +4,8 @@
 
 This project takes in data from a superhero database and it gives in a nice UI. It shows the superheros as a list, but also as a responsive grid including their images.
 
+Hosted on Netlify at https://superhero-database-matt.netlify.app/
+
 ## Installation
 
 1. Clone the repo: git clone git@github.com:mathewbwilliamson/superhero-app.git
@@ -42,6 +44,7 @@ Grid View, Mobile
 - I tried to make the overall design with a comics theme. This is the first thing I've ever created that uses comic-sans non-ironically. And yet, I still added a small skew to the text in order to make it a little bit better.
 - I kept the width to be 75ch as that is a good width for readability.
 - I built the Tabs component from scratch. It is fairly reusable.
+- The data is not hardcoded, I load it using a custom hook to fetch the data.
 - There is one custom hook in order to fetch the data. It is reusable and it includes support for tracking loading and errors, along with the data itself.
 - The architecture/folder structure is one that I've used for a while, and it makes sense. It has the following structure:
 
@@ -62,7 +65,17 @@ Grid View, Mobile
 ## Future Improvements
 
 - Make it a bit wider, 75ch for the text pieces not just the container of those text pieces.
+- Create a nicer loading state.
+- Right now, I am loading ALL the data into the List and into the Grid. Yuck. I would like to retool the design to scroll down the page in an infinite way. Creating client side infinite scrolling is a bit outside the scope of this project. However, there are images so that complicates things a bit too.
 - Find a better font for the main font instead of comic-sans. Even though it kind of works for this application, it's still not a good font.
+- Make a much nicer loading state.
+- Tabs Component Reusability: I want to extract the data out into a configuration file, and have the tabs component just loop through that configuration file. That will make the component tremendously more reusable.
+- Tabs Component Accessibility: I would definitely need to do more work to make this accessible.
+  - https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/#accessible-tabs
+  - https://inclusive-components.design/tabbed-interfaces/
+- If there were to be any more pages, I would use React Router and then implement code splitting. I would also add a URL parameter to let the user go straight to the Grid "page" or List "page" as well.
+- Since this was a small amount of data, and no data needs to be synchronized with a server, I chose to just use a custom React Hook. Generally, with new projects, I would want to use React Query in order to synchronize data.
+- Add a favicon.
 -
 
 ## Parting Words
